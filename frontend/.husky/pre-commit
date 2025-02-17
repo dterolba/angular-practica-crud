@@ -1,0 +1,3 @@
+npm test
+prettier - write "src/**/*.{ts,html,scss}"
+lint
