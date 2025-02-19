@@ -10,28 +10,27 @@ export class CarsService {
   }
 
   getCars(){
-    return this.http.get(this.basePath, this.setAuthHeader());
+    return this.http.get(this.basePath);
   }
 
   getCarById(id:any){
-    return this.http.get(this.basePath, this.setAuthHeader());
+    return this.http.get(this.basePath);
   }
 
   createCar(car:any){
-    return this.http.post(this.basePath, car, this.setAuthHeader());
+    return this.http.post(this.basePath, car);
   }
 
   updateCar(id:any){
-    return this.http.put(this.basePath, id, this.setAuthHeader());
+    return this.http.put(this.basePath, id);
   }
 
   deleteCar(id:any){
-    return this.http.delete(this.basePath, this.setAuthHeader());
+    return this.http.delete(this.basePath);
   }
 
-  setAuthHeader():any{
-    let auth = localStorage.getItem('auth-token')
-    let headers={ 'Authorization': 'Bearer '+auth }
-    return {headers};
+  getAuthHeader():any{
+    let auth = localStorage.getItem('auth-token') || '';
+    return 'Bearer '+auth;
   }
 }
