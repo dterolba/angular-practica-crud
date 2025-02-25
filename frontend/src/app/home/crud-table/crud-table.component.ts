@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CarsService } from '../../services/cars.service';
 
 @Component({
+  standalone:true,
   selector: 'app-crud-table',
   imports: [],
   templateUrl: './crud-table.component.html',
   styleUrl: './crud-table.component.css',
-  providers:  [ CarsService ],
 })
 export class CrudTableComponent implements OnInit{
 
@@ -24,9 +24,4 @@ export class CrudTableComponent implements OnInit{
       this.cars = data
     });
   }
-
-  createButton(){
-    
-  }
-
 }

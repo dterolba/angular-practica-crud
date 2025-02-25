@@ -14,7 +14,7 @@ export class CarsService {
   }
 
   getCarById(id:any){
-    return this.http.get(this.basePath);
+    return this.http.get(this.basePath+'/'+id);
   }
 
   createCar(car:any){
