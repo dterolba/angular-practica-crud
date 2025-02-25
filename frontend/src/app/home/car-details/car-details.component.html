@@ -1,0 +1,35 @@
+<div>
+    <div class="grid">
+        <div class="col">
+        Datos del coche
+        </div>
+        <div class="col">
+            Marca:
+            {{car.brand}}
+        </div>
+        <div class="col">
+            Modelo:
+            {{car.model}}
+        </div>
+        <div class="col">
+            Fecha de registro:
+            {{car.carDetails[0].registrationDate}}
+        </div>
+        <div class="col">
+            Millas:
+            <span [outerHTML]="car.carDetails[0].mileage | number: '1.2-2' | mileage"></span>
+        </div>
+        <div class="col">
+            Precio:
+            {{car.carDetails[0].price | currency: car.carDetails[0].currency}}
+        </div>
+        <div class="col">
+            Año de manufacturación:
+            {{car.carDetails[0].manufactureYear}}
+        </div>
+        <div class="col">
+            Matrícula:
+            {{car.carDetails[0].licensePlate}}
+        </div>
+    </div>
+</div>
